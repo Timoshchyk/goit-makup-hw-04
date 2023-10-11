@@ -45,6 +45,14 @@ ol {
     padding-left: 0;
 }
 
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
 a {
     text-decoration: none;
     color: currentColor;
@@ -59,6 +67,7 @@ img {
 button {
     cursor: pointer;
     border: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -70,6 +79,19 @@ button {
 
 .section {
     padding: 120px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 
@@ -152,11 +174,11 @@ color: #404bbf;
 }
 
 .emphasis{
-    color: #2E2F42;
+    color: #404bbf;
     position: relative;
 }
 
-.emphasis ::after{
+.emphasis::after{
     background-color: #404bbf;
     width: 48px;
     height: 4px;
@@ -212,7 +234,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     padding: 188px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70),
 rgba(46, 47, 66, 0.70)),
-    url(../images/people-office\ 1.png);
+    url(../images/icons.svg/people-office\ 1.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -249,6 +271,7 @@ rgba(46, 47, 66, 0.70)),
         padding: 16px 32px;
         margin: 0 auto;
         gap: 10px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .effection-btn:hover,
@@ -410,7 +433,7 @@ color: #434455;
 
 }
 
-.socials-link:hover,
+.team-link:hover,
 :focus {
     background-color: #404bbf;
 }
@@ -450,7 +473,11 @@ color: #434455;
 
 .portfolio-item {
     width: calc((100% - 48px) / 3);;
+transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.portfolio-item:hover{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-name {
@@ -485,6 +512,35 @@ color: #434455;
         letter-spacing: 0.02em;
 }
 
+.thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.thumb .overlay {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 32px;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+    background: var(--IRIS, #4d5ae5);
+    color: #f4f4fd;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.portfolio-item:hover .overlay {
+    transform: translateY(0);
+    cursor: pointer;
+}
+
 
 /*=======================================*/
 
@@ -499,7 +555,7 @@ padding: 100px 0;
     align-items: baseline;
 }
 
-.footer-logo-container {
+.footer-logo-conteiner {
     margin-right: 120px;
 }
 
