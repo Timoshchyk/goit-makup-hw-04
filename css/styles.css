@@ -232,7 +232,9 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .effective {
     background-color: #2E2F42;
     padding: 188px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office\ 1.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70),
+    rgba(46, 47, 66, 0.70)), 
+    url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
