@@ -434,7 +434,7 @@ color: #434455;
 }
 
 .team-link:hover,
-:focus{
+.team-link:focus{
     background-color:#404bbf;
 }
 
